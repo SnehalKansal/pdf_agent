@@ -1,11 +1,15 @@
 {
     "pandoc": {
         "engine": "xelatex",
-        "template": "",
+        "template": "ieee_template.tex",
         "options": [
             "--standalone",
-            "--toc",
-            "--number-sections"
+            "--number-sections",
+            "--columns", "72",
+            "-V", "geometry:margin=1in",
+            "-V", "fontsize=10pt",
+            "-V", "documentclass=IEEEtran",
+            "-V", "classoption=10pt,conference"
         ]
     },
     "overleaf": {

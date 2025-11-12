@@ -161,31 +161,21 @@
             cursor: not-allowed;
         }
 
-        .config-section {
-            margin-top: 30px;
+        /* Email Input */
+        .email-input-container {
+            margin-bottom: 20px;
         }
 
-        .config-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #e2e8f0;
-        }
-
-        .config-item {
-            margin-bottom: 15px;
-        }
-
-        .config-label {
+        .email-input-label {
             display: block;
             font-size: 0.9rem;
             color: #a0aec0;
             margin-bottom: 5px;
         }
 
-        .config-input {
+        .email-input {
             width: 100%;
-            padding: 8px 12px;
+            padding: 10px;
             border: 1px solid #4a5568;
             border-radius: 6px;
             background: #1a202c;
@@ -193,13 +183,9 @@
             font-size: 0.9rem;
         }
 
-        .config-input:focus {
+        .email-input:focus {
             outline: none;
             border-color: #667eea;
-        }
-
-        .config-checkbox {
-            margin-right: 8px;
         }
 
         /* Main Content Area */
@@ -447,189 +433,6 @@
         .sidebar-content::-webkit-scrollbar-thumb {
             background: #4a5568;
         }
-
-        /* Configuration Modal */
-        .config-modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-        }
-
-        .config-modal-content {
-            background-color: white;
-            margin: 5% auto;
-            padding: 0;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 600px;
-            max-height: 80vh;
-            overflow-y: auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .config-modal-header {
-            background: #667eea;
-            color: white;
-            padding: 20px;
-            border-radius: 10px 10px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .config-modal-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-
-        .config-close {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: background 0.3s ease;
-        }
-
-        .config-close:hover {
-            background: rgba(255,255,255,0.2);
-        }
-
-        .config-modal-body {
-            padding: 30px;
-        }
-
-        .config-section-modal {
-            margin-bottom: 30px;
-        }
-
-        .config-section-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 15px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #e2e8f0;
-        }
-
-        .config-form-group {
-            margin-bottom: 20px;
-        }
-
-        .config-form-label {
-            display: block;
-            font-weight: 500;
-            color: #4a5568;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-        }
-
-        .config-form-input {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .config-form-input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        .config-form-checkbox {
-            margin-right: 8px;
-        }
-
-        .config-form-textarea {
-            min-height: 80px;
-            resize: vertical;
-        }
-
-        .config-modal-footer {
-            padding: 20px 30px;
-            background: #f7fafc;
-            border-radius: 0 0 10px 10px;
-            display: flex;
-            justify-content: flex-end;
-            gap: 10px;
-        }
-
-        .config-btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .config-btn-primary {
-            background: #667eea;
-            color: white;
-        }
-
-        .config-btn-primary:hover {
-            background: #5a67d8;
-        }
-
-        .config-btn-secondary {
-            background: #e2e8f0;
-            color: #4a5568;
-        }
-
-        .config-btn-secondary:hover {
-            background: #cbd5e0;
-        }
-
-        .config-edit-btn {
-            background: none;
-            border: none;
-            color: #a0aec0;
-            cursor: pointer;
-            padding: 5px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .config-edit-btn:hover {
-            color: #667eea;
-            background: rgba(102, 126, 234, 0.1);
-        }
-
-        .config-status {
-            padding: 10px 15px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            font-size: 0.9rem;
-        }
-
-        .config-status-success {
-            background: #c6f6d5;
-            color: #22543d;
-            border: 1px solid #9ae6b4;
-        }
-
-        .config-status-error {
-            background: #fed7d7;
-            color: #c53030;
-            border: 1px solid #feb2b2;
-        }
     </style>
 </head>
 <body>
@@ -656,42 +459,15 @@
                     </div>
                 </div>
 
+                <!-- Email Input -->
+                <div class="email-input-container">
+                    <label class="email-input-label" for="emailRecipient">Recipient Email</label>
+                    <input type="email" class="email-input" id="emailRecipient" placeholder="Enter email to send PDF">
+                </div>
+
                 <!-- File List -->
                 <div class="file-list" id="fileList">
                     <!-- Files will be added here dynamically -->
-                </div>
-
-                <!-- Configuration Section -->
-                <div class="config-section">
-                    <div class="config-title">
-                        <i class="fas fa-cog"></i> Configuration
-                        <button class="config-edit-btn" onclick="openConfigModal()">
-                            <i class="fas fa-edit"></i>
-                        </button>
-                    </div>
-                    
-                    <div class="config-item">
-                        <label class="config-label">
-                            <input type="checkbox" class="config-checkbox" id="useOverleaf"> Use Overleaf
-                        </label>
-                    </div>
-                    
-                    <div class="config-item">
-                        <label class="config-label" for="emailRecipient">Recipient Email</label>
-                        <input type="email" class="config-input" id="emailRecipient" placeholder="Enter email to send PDF">
-                    </div>
-                    
-                    <div class="config-item">
-                        <label class="config-label">
-                            <input type="checkbox" class="config-checkbox" id="sendEmail" checked> Send Email
-                        </label>
-                    </div>
-                    
-                    <div class="config-item">
-                        <label class="config-label">
-                            <input type="checkbox" class="config-checkbox" id="triggerN8n" checked> Trigger n8n
-                        </label>
-                    </div>
                 </div>
             </div>
         </div>
@@ -792,154 +568,6 @@
         </div>
     </div>
 
-    <!-- Configuration Modal -->
-    <div id="configModal" class="config-modal">
-        <div class="config-modal-content">
-            <div class="config-modal-header">
-                <div class="config-modal-title">
-                    <i class="fas fa-cog"></i> Configuration Settings
-                </div>
-                <button class="config-close" onclick="closeConfigModal()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <div class="config-modal-body">
-                <div id="configStatus"></div>
-                
-                <form id="configForm">
-                    <!-- Email Configuration -->
-                    <div class="config-section-modal">
-                        <div class="config-section-title">
-                            <i class="fas fa-envelope"></i> Email Settings
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="emailSmtpServer">SMTP Server</label>
-                            <input type="text" class="config-form-input" id="emailSmtpServer" name="email.smtp_server" placeholder="smtp.gmail.com">
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="emailSmtpPort">SMTP Port</label>
-                            <input type="number" class="config-form-input" id="emailSmtpPort" name="email.smtp_port" placeholder="587">
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="emailUsername">Username</label>
-                            <input type="email" class="config-form-input" id="emailUsername" name="email.username" placeholder="your-email@gmail.com">
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="emailPassword">Password (App Password)</label>
-                            <input type="password" class="config-form-input" id="emailPassword" name="email.password" placeholder="Your app password">
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="emailFrom">From Email</label>
-                            <input type="email" class="config-form-input" id="emailFrom" name="email.from_email" placeholder="your-email@gmail.com">
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="emailTo">To Email</label>
-                            <input type="email" class="config-form-input" id="emailTo" name="email.to_email" placeholder="recipient@example.com">
-                        </div>
-                    </div>
-                    
-                    <!-- Overleaf Configuration -->
-                    <div class="config-section-modal">
-                        <div class="config-section-title">
-                            <i class="fas fa-cloud"></i> Overleaf Settings
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="overleafApiUrl">API URL</label>
-                            <input type="url" class="config-form-input" id="overleafApiUrl" name="overleaf.api_url" placeholder="https://www.overleaf.com/api/v1">
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="overleafApiKey">API Key</label>
-                            <input type="password" class="config-form-input" id="overleafApiKey" name="overleaf.api_key" placeholder="Your Overleaf API key">
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="overleafProjectId">Project ID</label>
-                            <input type="text" class="config-form-input" id="overleafProjectId" name="overleaf.project_id" placeholder="Your Overleaf project ID">
-                        </div>
-                    </div>
-                    
-                    <!-- n8n Configuration -->
-                    <div class="config-section-modal">
-                        <div class="config-section-title">
-                            <i class="fas fa-link"></i> n8n Workflow Settings
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="n8nWebhookUrl">Webhook URL</label>
-                            <input type="url" class="config-form-input" id="n8nWebhookUrl" name="n8n.webhook_url" placeholder="https://your-n8n-instance.com/webhook/pdf-process">
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="n8nApiKey">API Key (Optional)</label>
-                            <input type="password" class="config-form-input" id="n8nApiKey" name="n8n.api_key" placeholder="Your n8n API key">
-                        </div>
-                    </div>
-                    
-                    <!-- Pandoc Configuration -->
-                    <div class="config-section-modal">
-                        <div class="config-section-title">
-                            <i class="fas fa-file-pdf"></i> Pandoc Settings
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="pandocEngine">PDF Engine</label>
-                            <select class="config-form-input" id="pandocEngine" name="pandoc.engine">
-                                <option value="xelatex">XeLaTeX</option>
-                                <option value="pdflatex">PDFLaTeX</option>
-                                <option value="lualatex">LuaLaTeX</option>
-                            </select>
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="pandocTemplate">Template (Optional)</label>
-                            <input type="text" class="config-form-input" id="pandocTemplate" name="pandoc.template" placeholder="Path to custom template">
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="pandocOptions">Additional Options (JSON Array)</label>
-                            <textarea class="config-form-input config-form-textarea" id="pandocOptions" name="pandoc.options" placeholder='["--standalone", "--toc", "--number-sections"]'></textarea>
-                        </div>
-                    </div>
-                    
-                    <!-- Output Configuration -->
-                    <div class="config-section-modal">
-                        <div class="config-section-title">
-                            <i class="fas fa-folder"></i> Output Settings
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="outputDirectory">Output Directory</label>
-                            <input type="text" class="config-form-input" id="outputDirectory" name="output.directory" placeholder="output">
-                        </div>
-                        
-                        <div class="config-form-group">
-                            <label class="config-form-label" for="outputFilenameTemplate">Filename Template</label>
-                            <input type="text" class="config-form-input" id="outputFilenameTemplate" name="output.filename_template" placeholder="{original_name}_{timestamp}.pdf">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            
-            <div class="config-modal-footer">
-                <button type="button" class="config-btn config-btn-secondary" onclick="closeConfigModal()">
-                    Cancel
-                </button>
-                <button type="button" class="config-btn config-btn-primary" onclick="saveConfig()">
-                    Save Configuration
-                </button>
-            </div>
-        </div>
-    </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <script>
         // Initialize Socket.IO
@@ -950,6 +578,7 @@
         const fileInput = document.getElementById('fileInput');
         const fileList = document.getElementById('fileList');
         const updatesList = document.getElementById('updatesList');
+        const emailRecipient = document.getElementById('emailRecipient');
         
         // Session management
         let sessionId = localStorage.getItem('sessionId') || generateSessionId();
@@ -1031,10 +660,8 @@
         
         function convertFile(filename) {
             const options = {
-                use_overleaf: document.getElementById('useOverleaf').checked,
-                send_email: document.getElementById('sendEmail').checked,
-                trigger_n8n: document.getElementById('triggerN8n').checked,
-                email_recipient: document.getElementById('emailRecipient').value
+                send_email: true,
+                email_recipient: emailRecipient.value
             };
             
             fetch('/api/convert', {
@@ -1185,116 +812,6 @@
                 }
             }, 5000);
         }
-        
-        // Configuration Modal Functions
-        function openConfigModal() {
-            document.getElementById('configModal').style.display = 'block';
-            loadCurrentConfig();
-        }
-        
-        function closeConfigModal() {
-            document.getElementById('configModal').style.display = 'none';
-            document.getElementById('configStatus').innerHTML = '';
-        }
-        
-        function loadCurrentConfig() {
-            fetch('/api/config')
-            .then(response => response.json())
-            .then(config => {
-                // Populate form fields
-                document.getElementById('emailSmtpServer').value = config.email.smtp_server || '';
-                document.getElementById('emailSmtpPort').value = config.email.smtp_port || '';
-                document.getElementById('emailUsername').value = config.email.username || '';
-                document.getElementById('emailPassword').value = config.email.password || '';
-                document.getElementById('emailFrom').value = config.email.from_email || '';
-                document.getElementById('emailTo').value = config.email.to_email || '';
-                
-                document.getElementById('overleafApiUrl').value = config.overleaf.api_url || '';
-                document.getElementById('overleafApiKey').value = config.overleaf.api_key || '';
-                document.getElementById('overleafProjectId').value = config.overleaf.project_id || '';
-                
-                document.getElementById('n8nWebhookUrl').value = config.n8n.webhook_url || '';
-                document.getElementById('n8nApiKey').value = config.n8n.api_key || '';
-                
-                document.getElementById('pandocEngine').value = config.pandoc.engine || 'xelatex';
-                document.getElementById('pandocTemplate').value = config.pandoc.template || '';
-                document.getElementById('pandocOptions').value = JSON.stringify(config.pandoc.options || [], null, 2);
-                
-                document.getElementById('outputDirectory').value = config.output.directory || '';
-                document.getElementById('outputFilenameTemplate').value = config.output.filename_template || '';
-            })
-            .catch(error => {
-                showConfigStatus('Error loading configuration: ' + error.message, 'error');
-            });
-        }
-        
-        function saveConfig() {
-            const formData = new FormData(document.getElementById('configForm'));
-            const config = {};
-            
-            // Convert form data to nested object
-            for (let [key, value] of formData.entries()) {
-                const keys = key.split('.');
-                let current = config;
-                for (let i = 0; i < keys.length - 1; i++) {
-                    if (!current[keys[i]]) {
-                        current[keys[i]] = {};
-                    }
-                    current = current[keys[i]];
-                }
-                current[keys[keys.length - 1]] = value;
-            }
-            
-            // Handle special cases
-            if (config.pandoc && config.pandoc.options) {
-                try {
-                    config.pandoc.options = JSON.parse(config.pandoc.options);
-                } catch (e) {
-                    showConfigStatus('Invalid JSON in Pandoc options', 'error');
-                    return;
-                }
-            }
-            
-            // Convert port to number
-            if (config.email && config.email.smtp_port) {
-                config.email.smtp_port = parseInt(config.email.smtp_port);
-            }
-            
-            fetch('/api/config', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(config)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    showConfigStatus('Configuration saved successfully!', 'success');
-                    setTimeout(() => {
-                        closeConfigModal();
-                    }, 1500);
-                } else {
-                    showConfigStatus('Error saving configuration: ' + data.error, 'error');
-                }
-            })
-            .catch(error => {
-                showConfigStatus('Error saving configuration: ' + error.message, 'error');
-            });
-        }
-        
-        function showConfigStatus(message, type) {
-            const statusDiv = document.getElementById('configStatus');
-            statusDiv.innerHTML = `<div class="config-status config-status-${type}">${message}</div>`;
-        }
-        
-        // Close modal when clicking outside
-        window.addEventListener('click', function(event) {
-            const modal = document.getElementById('configModal');
-            if (event.target === modal) {
-                closeConfigModal();
-            }
-        });
         
         // Load session data and updates on page load
         window.addEventListener('load', function() {

@@ -13,6 +13,8 @@ An intelligent AI agent that converts LaTeX and Markdown files to PDF using pand
 - 🔗 **n8n Workflow**: Triggers automated workflows for advanced processing
 - 📊 **Comprehensive Logging**: Detailed logs for monitoring and debugging
 - ⚙️ **Configurable**: JSON-based configuration for easy customization
+- 📐 **IEEE Formatting**: Automatic formatting to IEEE academic standards with proper section numbering, citations, and layout
+- 📐 **IEEE Formatting**: Automatic formatting to IEEE academic standards with proper section numbering, citations, and layout
 
 ## Prerequisites
 
@@ -52,7 +54,7 @@ An intelligent AI agent that converts LaTeX and Markdown files to PDF using pand
 {
     "pandoc": {
         "engine": "xelatex",
-        "template": null,
+        "template": "ieee_template_proper.tex",
         "options": ["--standalone", "--toc", "--number-sections"]
     },
     "overleaf": {
@@ -111,6 +113,9 @@ python pdf_agent.py paper.md --no-email
 
 # Skip n8n workflow
 python pdf_agent.py paper.md --no-n8n
+
+# Refine content to IEEE format
+python pdf_agent.py paper.md --refine
 ```
 
 ### Command Line Options
@@ -121,6 +126,7 @@ python pdf_agent.py paper.md --no-n8n
 - `--no-email`: Skip email sending
 - `--no-n8n`: Skip n8n workflow trigger
 - `--directory`: Process entire directory
+- `--refine`: Refine content to IEEE academic writing standards
 
 ### Examples
 
@@ -175,6 +181,32 @@ pdf-agent/
 
 - **Markdown**: `.md`, `.markdown`
 - **LaTeX**: `.tex`, `.latex`
+
+## IEEE Formatting Standards
+
+The PDF Agent automatically formats documents according to IEEE academic standards:
+
+1. **Title & Authors**
+   - Title is bold, title case, and centered
+   - Authors follow IEEE format: Name, Department, Institution, Country, Email
+
+2. **Abstract**
+   - Begins with "Abstract—" in italics
+   - Concise single paragraph summarizing the paper
+
+3. **Index Terms**
+   - Begins with "Index Terms—" in italics
+   - 3–8 keywords separated by commas
+
+4. **Main Sections**
+   - Numbered using Roman numerals (I. INTRODUCTION, II. METHODOLOGY, etc.)
+   - Subsections labeled alphabetically (A., B., etc.)
+
+5. **References**
+   - Formatted in IEEE citation style with square brackets
+   - Proper journal name formatting and pagination
+
+Use the `--refine` flag to automatically convert content to IEEE-style academic writing.
 
 ## Error Handling
 

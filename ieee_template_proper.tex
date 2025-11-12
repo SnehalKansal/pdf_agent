@@ -1,0 +1,37 @@
+\documentclass[10pt, conference]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{array}
+\usepackage{ifpdf}
+\usepackage{url}
+\usepackage{cite}
+\usepackage{color}
+
+% Format title to be bold, centered, and title case
+\title{\bfseries\centering $title$}
+
+% Format authors according to IEEE standards
+\author{
+$for(author)$
+$author$
+$sep$ \and
+$endfor$
+}
+
+\begin{document}
+
+\maketitle
+
+% Abstract formatting
+\begin{abstract}
+\textit{Abstract---}$abstract$
+\end{abstract}
+
+% Index terms formatting
+\textit{Index Terms---}$for(keywords)$$keywords$$sep$, $endfor$
+
+% Main content with proper section numbering
+$body$
+
+\end{document}

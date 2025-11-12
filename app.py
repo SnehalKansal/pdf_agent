@@ -197,11 +197,14 @@ def process_conversion(session_id, file_info, options):
         # Convert file with IEEE formatting
         send_email = options.get('send_email', True)
         email_recipient = options.get('email_recipient', None)
+        use_ai_formatting = options.get('use_ai_formatting', False)
         
-        success = agent.process_file(
+        # Use the new process_file_with_fallback method
+        success = agent.process_file_with_fallback(
             file_info['filepath'],
             send_email=send_email,
-            email_recipient=email_recipient
+            email_recipient=email_recipient,
+            use_ai_refinement=use_ai_formatting
         )
         
         if success:
